@@ -2,7 +2,7 @@
 library(vegan)
 
 #data preparation
-woodfall <- read.csv("woodfall.csv")
+woodfall <- read.csv("data/woodfall.csv")
 head(woodfall)
 summary(woodfall)
 
