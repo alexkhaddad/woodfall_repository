@@ -18,6 +18,15 @@ plot(hclust(dist(t(woodfall.matrix))))
 plot(hclust(dist(woodfall.matrix)))
 dev.off()
 
+#fishers alpha
+alpha <- array()
+for (i in 1:ncol(woodfall.matrix)) {
+  n <- woodfall.matrix[,i]
+  alpha[i] <- fisher.alpha(n[n > 10])
+}
+alpha[alpha > 10] <- NA
+alpha <-
+
 plot(hclust(vegdist(woodfall.matrix))) #euclidean is informed by absolute abundance rather than relative     
 
 #factor analysis
